@@ -39,6 +39,7 @@ function App() {
     } catch (error) {
       console.log(error);
     }
+    setQuery("");
   };
 
   const changeHandler = (e) => {
@@ -61,7 +62,7 @@ function App() {
             <Form className="d-flex">
               <FormControl
                 type="search"
-                placeholder="Movie Search"
+                placeholder="Search movies..."
                 className="me-2"
                 aria-label="search"
                 name="query"
@@ -75,6 +76,19 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      <div>
+        {movies.length > 0 ? (
+          <div className="container">
+            <div className="grid">
+              {movies.map((movieReq) => (
+                <MovieBox key={movieReq.id} {...movieReq} />
+              ))}
+            </div>
+          </div>
+        ) : (
+          <h2 className="not-page-found">Sorry !! No Movies Found</h2>
+        )}
+      </div>
       <div className="container">
         <div className="grid">
           {movies.map((movieReq) => (

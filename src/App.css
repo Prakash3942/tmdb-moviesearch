@@ -24,3 +24,16 @@ body {
 .bg-dark {
   background-color: #2f4f4f !important;
 }
+.not-page-found {
+  color: red;
+  text-align: center;
+}
+
+h4,
+h5,
+h6 {
+  color: #178080;
+}
+span {
+  color: black;
+}

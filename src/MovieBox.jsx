@@ -45,12 +45,18 @@ const MovieBox = ({
                 alt="movies_image"
               />
               <h3>{title}</h3>
-              <h4>TMDB: {vote_average}</h4>
-              <h5>Release Date: {release_date}</h5>
+              <h4>
+                TMDB: <span>{vote_average}</span>
+              </h4>
+              <h5>
+                Release Date: <span>{release_date}</span>
+              </h5>
               <br />
               <br />
               <h6>Overview</h6>
-              <p>{overview}</p>
+              <p>
+                <span>{overview}</span>
+              </p>
             </ModalBody>
             <Modal.Footer>
               <Button variant="secondary" onClick={handleClose}>
